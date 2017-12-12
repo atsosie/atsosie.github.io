@@ -1,0 +1,10 @@
+
+            <h3>UnderConstruction - Final Project</h3>
+            <p>A DIY-focused app for browsing and creating projects made by users or shared from other sites. Built using Ruby, Rails, jQuery, Postgres/Active Record, and custom HTML/CSS/SASS.</p>
+
+            <h3>WikiMap</h3>
+            <p>App with sleek GUI that allows users to collaboratively create, view, and share lists of places. Built with Javascript, ExpressJS, NodeJS, jQuery, Knex, Postgres, and HTML/CSS/SASS with Bootstrap3. </p>
+
+            <h3>Chatty</h3>
+            <p>A real-time chat app that allow users to send and receive messages/notifications, change their username and view the number of online users. Built using React, Node, Webpack, and Babel.</p>
+
