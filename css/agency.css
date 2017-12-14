@@ -32,7 +32,7 @@ section {
   section h2.section-heading {
     font-size: 40px;
     margin-top: 0;
-    margin-bottom: 15px; }
+    margin-bottom: 25px; }
   section h3.section-subheading {
     font-size: 16px;
     font-weight: 400;
@@ -426,20 +426,20 @@ body {
       padding: 0 100px 20px 20px; } }
 
 .team-member {
-  margin-bottom: 50px;
-  text-align: center; }
+  margin-bottom: 50px; }
   .team-member img {
     width: 225px;
     height: 225px;
     border: 7px solid #fff; }
   .team-member h4 {
     margin-top: 25px;
-    margin-bottom: 0;
+    margin-bottom: 25px;
     text-transform: none; }
   .team-member p {
     margin-top: 0; }
   .team-member td {
-    text-align: left; }
+    text-align: left;
+    padding: 0px 5px 5px 5px; }
 
 footer {
   padding: 25px 0;
