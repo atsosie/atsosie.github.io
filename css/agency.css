@@ -438,7 +438,8 @@ body {
     text-transform: none; }
   .team-member p {
     margin-top: 0; }
-
+  .team-member td {
+    text-align: left; }
 
 footer {
   padding: 25px 0;
@@ -455,9 +456,10 @@ footer {
     text-transform: none;
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
-ul.social-buttons {
+.social-buttons {
   margin-bottom: 0; }
-  ul.social-buttons li a {
+  .social-buttons a {
+    text-align: center;
     font-size: 20px;
     line-height: 40px;
     display: block;
@@ -470,5 +472,5 @@ ul.social-buttons {
     border-radius: 100%;
     outline: none;
     background-color: #212529; }
-    ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
+    .social-buttons a:active, .social-buttons a:focus, .social-buttons a:hover {
       background-color: #fed136; }
