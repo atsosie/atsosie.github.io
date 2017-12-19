@@ -37,7 +37,7 @@ section {
     font-size: 30px;
     font-weight: 400;
     font-style: italic;
-    margin-top: 25px;
+    margin-top: 50px;
     margin-bottom: 50px;
     text-transform: none;
     font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
@@ -330,6 +330,7 @@ body {
     padding: 0px 5px 5px 5px; }
 
 .timeline {
+  margin-top: 50px;
   position: relative;
   padding: 0;
   list-style: none; }
