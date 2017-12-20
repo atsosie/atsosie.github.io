@@ -27,6 +27,14 @@ h6 {
   font-weight: 700;
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
+.subheading {
+  font-style: italic;
+  margin-bottom: 20px; }
+
+.skills {
+  line-height: .75;
+  text-align: left; }
+
 section {
   padding: 100px 0; }
   section h2.section-heading {
