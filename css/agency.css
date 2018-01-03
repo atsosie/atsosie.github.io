@@ -300,16 +300,6 @@ body {
         transform: rotate(90deg);
         background-color: #212529; }
 
-#about {
-  background-image: url("../img/header-bg.jpg");
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
-
 @media (min-width: 767px) {
   .profile {
     text-align: left; } }
