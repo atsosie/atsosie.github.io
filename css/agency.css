@@ -27,6 +27,14 @@ h6 {
   font-weight: 700;
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
+.subheading {
+  font-style: italic;
+  margin-bottom: 20px; }
+
+.skills {
+  line-height: .75;
+  text-align: left; }
+
 section {
   padding: 100px 0; }
   section h2.section-heading {
@@ -37,7 +45,7 @@ section {
     font-size: 30px;
     font-weight: 400;
     font-style: italic;
-    margin-top: 25px;
+    margin-top: 50px;
     margin-bottom: 50px;
     text-transform: none;
     font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
@@ -292,16 +300,6 @@ body {
         transform: rotate(90deg);
         background-color: #212529; }
 
-#about {
-  background-image: url("../img/header-bg.jpg");
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
-
 @media (min-width: 767px) {
   .profile {
     text-align: left; } }
@@ -330,6 +328,7 @@ body {
     padding: 0px 5px 5px 5px; }
 
 .timeline {
+  margin-top: 50px;
   position: relative;
   padding: 0;
   list-style: none; }
