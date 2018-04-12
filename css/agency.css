@@ -3,9 +3,11 @@
  * Copyright 2013-2017 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
  */
+
 body {
   overflow-x: hidden;
-  font-family: 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+  font-family: 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #e8e8e9; }
 
 p {
   line-height: 1.75; }
@@ -90,7 +92,7 @@ body {
   -webkit-tap-highlight-color: #fed136; }
 
 #mainNav {
-  background-color: #212529; }
+  background-color: #373741; }
   #mainNav .navbar-toggler {
     font-size: 12px;
     right: 0;
@@ -123,7 +125,7 @@ body {
     -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
     transition: padding-top 0.3s, padding-bottom 0.3s;
     border: none;
-    background-color: #212529; }
+    background-color: #373741; }
     #mainNav .navbar-brand {
       font-size: 1.75em;
       -webkit-transition: all 0.3s;
@@ -135,7 +137,7 @@ body {
     #mainNav.navbar-shrink {
       padding-top: 0;
       padding-bottom: 0;
-      background-color: #212529; }
+      background-color: #373741; }
       #mainNav.navbar-shrink .navbar-brand {
         font-size: 1.25em;
         padding: 12px 0; } }
@@ -241,7 +243,7 @@ body {
       -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
       transform: rotate(45deg);
-      background-color: #212529; }
+      background-color: #373741; }
       .portfolio-modal .close-modal .lr .rl {
         /* Safari and Chrome */
         z-index: 1052;
@@ -251,7 +253,7 @@ body {
         -webkit-transform: rotate(90deg);
         -ms-transform: rotate(90deg);
         transform: rotate(90deg);
-        background-color: #212529; }
+        background-color: #373741; }
 
 @media (min-width: 767px) {
   .profile {
@@ -445,6 +447,6 @@ footer {
     color: white;
     border-radius: 100%;
     outline: none;
-    background-color: #212529; }
+    background-color: #373741; }
     .social-buttons a:active, .social-buttons a:focus, .social-buttons a:hover {
       background-color: #fed136; }
