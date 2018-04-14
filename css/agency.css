@@ -1,5 +1,6 @@
 /*!
- * Start Bootstrap - Agency v4.0.0-beta.2 (https://startbootstrap.com/template-overviews/agency)
+ * Template modified by Amber Tsosie
+ * Oiginal template by Start Bootstrap - Agency v4.0.0-beta.2 (https://startbootstrap.com/template-overviews/agency)
  * Copyright 2013-2017 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
  */
@@ -7,18 +8,18 @@
 body {
   overflow-x: hidden;
   font-family: 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  background-color: #e8e8e9; }
+  background-color: #f6f4ef; }
 
 p {
   line-height: 1.75; }
 
 a {
-  color: #fed136; }
+  color: #812530; }
   a:hover {
-    color: #fec503; }
+    color: #812530; }
 
 .text-primary {
-  color: #fed136 !important; }
+  color: #812530 !important; }
 
 h1,
 h2,
@@ -65,21 +66,21 @@ section {
   padding: 20px 40px; }
 
 .btn-primary {
-  background-color: #fed136;
-  border-color: #fed136; }
+  background-color: #373741;
+  border-color: #373741; }
   .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
-    background-color: #fec810 !important;
-    border-color: #fec810 !important;
+    background-color: #812530 !important;
+    border-color: #812530 !important;
     color: white; }
   .btn-primary:active, .btn-primary:focus {
     box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important; }
 
 ::-moz-selection {
-  background: #fed136;
+  background: #812530;
   text-shadow: none; }
 
 ::selection {
-  background: #fed136;
+  background: #812530;
   text-shadow: none; }
 
 img::selection {
@@ -89,33 +90,33 @@ img::-moz-selection {
   background: transparent; }
 
 body {
-  -webkit-tap-highlight-color: #fed136; }
+  -webkit-tap-highlight-color: #812530; }
 
 #mainNav {
-  background-color: #373741; }
+  background-color: #f6f4ef; }
   #mainNav .navbar-toggler {
     font-size: 12px;
     right: 0;
     padding: 13px;
     text-transform: uppercase;
-    color: white;
+    color: #63636b;
     border: 0;
-    background-color: #fed136;
+    background-color: #812530;
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   #mainNav .navbar-brand {
-    color: #fed136;
+    color: #812530;
     font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive; }
     #mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-      color: #fec503; }
+      color: #373741; }
   #mainNav .navbar-nav .nav-item .nav-link {
 /*    font-size: 90%;*/
     font-weight: 400;
     padding: 0.75em 0;
     letter-spacing: 1px;
-    color: white;
+    color: #63636b;
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
     #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-      color: #fed136; }
+      color: #812530; }
 
 @media (min-width: 992px) {
   #mainNav {
@@ -125,7 +126,7 @@ body {
     -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
     transition: padding-top 0.3s, padding-bottom 0.3s;
     border: none;
-    background-color: #373741; }
+    background-color: #f6f4ef; }
     #mainNav .navbar-brand {
       font-size: 1.75em;
       -webkit-transition: all 0.3s;
@@ -137,7 +138,7 @@ body {
     #mainNav.navbar-shrink {
       padding-top: 0;
       padding-bottom: 0;
-      background-color: #373741; }
+      background-color: #e0dac8; }
       #mainNav.navbar-shrink .navbar-brand {
         font-size: 1.25em;
         padding: 12px 0; } }
@@ -158,7 +159,7 @@ body {
       -moz-transition: all ease 0.5s;
       transition: all ease 0.5s;
       opacity: 0;
-      background: rgba(254, 209, 54, 0.9); }
+      background: #812530; }
       #portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
         opacity: 1; }
       #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
@@ -199,7 +200,7 @@ body {
 .portfolio-modal {
   padding-right: 0px !important; }
   .portfolio-modal .modal-dialog {
-    margin: 1rem;
+    /*margin: 1rem;*/
     max-width: 100vw; }
   .portfolio-modal .modal-content {
     padding: 100px 0;
@@ -293,7 +294,7 @@ body {
     width: 2px;
     margin-left: -1.5px;
     content: '';
-    background-color: #e9ecef; }
+    background-color: #d8d0b9; }
   .timeline > li {
     position: relative;
     min-height: 50px;
@@ -328,9 +329,9 @@ body {
       margin-left: 0;
       text-align: center;
       color: white;
-      border: 7px solid #e9ecef;
+      border: 7px solid #d8d0b9;
       border-radius: 100%;
-      background-color: #fed136; }
+      background-color: #d8d0b9; }
       .timeline > li .timeline-image h4 {
         font-size: 10px;
         line-height: 14px;
