@@ -22,6 +22,8 @@ Dev Project Descriptions:
             <h3>UnderConstruction - Final Project</h3>
             <p>App for the DIY community to find, save, and share project ideas. Users can browse current projects, create new custom projects, or share content from other sites. Activity is saved within user profiles. Developed with a team as our final project for Lighthouse Labs. Built using Ruby, Rails, jQuery, Postgres/Active Record, and custom HTML/CSS/SASS.</p>
 
+            Skills+Tools: Ruby, Rails, jQuery, AJAX, HTML, CSS/SCSS, PostgreSQL, Active Record
+
             <h3>WikiMap</h3>
             <p>App with sleek GUI that allows users to collaboratively create, view, and share lists of places. Built with Javascript, ExpressJS, NodeJS, jQuery, Knex, Postgres, and HTML/CSS/SASS with Bootstrap3. </p>
 
