@@ -143,6 +143,9 @@ body {
         font-size: 1.25em;
         padding: 12px 0; } }
 
+.modal-dialog {
+  margin: 0px; }
+
 #portfolio .portfolio-item {
   right: 0;
   margin: 0 0 15px; }
@@ -281,8 +284,10 @@ body {
     text-align: left;
     padding: 0px 5px 5px 5px; }
 
+.project-image {
+  margin: 0px -30px; }
+
 .project-timeline {
-  margin-top: 50px;
   position: relative;
   padding: 0;
   list-style: none; }
