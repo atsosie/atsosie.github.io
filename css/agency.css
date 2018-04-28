@@ -221,8 +221,8 @@ body {
     .portfolio-modal .modal-content ul.list-inline {
       margin-top: 0;
       margin-bottom: 30px; }
-    .portfolio-modal .modal-content img {
-      margin-bottom: 30px; }
+/*    .portfolio-modal .modal-content img {
+      margin-bottom: 30px; }*/
     .portfolio-modal .modal-content button {
       cursor: pointer; }
   .portfolio-modal .close-modal {
@@ -285,7 +285,9 @@ body {
     padding: 0px 5px 5px 5px; }
 
 .project-image {
-  margin: 0px -30px; }
+  margin: 0px -30px;
+  background-color: #d8d0b9;
+  padding: 0; }
 
 .project-timeline {
   position: relative;
@@ -295,7 +297,7 @@ body {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 40px;
+    left: 50px;
     width: 2px;
     margin-left: -1.5px;
     content: '';
@@ -303,7 +305,8 @@ body {
   .project-timeline > li {
     position: relative;
     min-height: 50px;
-    margin-bottom: 50px; }
+    margin-bottom: 50px;
+    padding-bottom: 50px; }
     .project-timeline > li:after, .project-timeline > li:before {
       display: table;
       content: ' '; }
@@ -313,7 +316,7 @@ body {
       position: relative;
       float: right;
       width: 100%;
-      padding: 0 20px 0 100px;
+      padding: 0 30px 0 130px;
       text-align: left; }
       .project-timeline > li .project-timeline-panel:before {
         right: auto;
@@ -329,8 +332,8 @@ body {
       position: absolute;
       z-index: 100;
       left: 0;
-      width: 80px;
-      height: 80px;
+      width: 100px;
+      height: 100px;
       margin-left: 0;
       text-align: center;
       color: white;
@@ -343,7 +346,7 @@ body {
         margin-top: 12px; }
     .project-timeline > li.project-timeline-inverted > .project-timeline-panel {
       float: right;
-      padding: 0 20px 0 100px;
+      padding: 0 30px 0 130px;
       text-align: left; }
       .project-timeline > li.project-timeline-inverted > .project-timeline-panel:before {
         right: auto;
