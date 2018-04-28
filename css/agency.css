@@ -75,6 +75,26 @@ section {
   .btn-primary:active, .btn-primary:focus {
     box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important; }
 
+.btn-timeline {
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  margin-left: 0;
+  text-align: center;
+  color: white;
+  border: 7px solid #d8d0b9;
+  border-radius: 100%;
+  background-color: #d8d0b9;
+  cursor: pointer; }
+  .btn-timeline:active, .btn-timeline:focus, .btn-timeline:hover {
+    background-color: #812530 !important;
+    border-color: #812530 !important;
+    color: white; }
+  .btn-timeline:active, .btn-timeline:focus {
+    box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important; }
+
 ::-moz-selection {
   background: #812530;
   text-shadow: none; }
@@ -369,6 +389,8 @@ body {
   .project-timeline .project-timeline-body > p {
     margin-bottom: 0; }
 
+/*-------------------------------------*/
+
 /*@media (min-width: 768px) {
   .project-timeline:before {
     left: 50%; }
@@ -423,6 +445,9 @@ body {
         margin-top: 40px; }
     .project-timeline > li.project-timeline-inverted > .project-timeline-panel {
       padding: 0 100px 20px 20px; } }*/
+
+/*-------------------------------------*/
+
 
 .timeline {
   margin-top: 50px;
