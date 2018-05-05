@@ -101,11 +101,11 @@ btn-close {
   stroke-width: .5px; }
 
 ::-moz-selection {
-  background: #812530;
+  background: #e8e8e9;
   text-shadow: none; }
 
 ::selection {
-  background: #812530;
+  background: #e8e8e9;
   text-shadow: none; }
 
 img::selection {
@@ -115,7 +115,7 @@ img::-moz-selection {
   background: transparent; }
 
 body {
-  -webkit-tap-highlight-color: #812530; }
+  -webkit-tap-highlight-color: #e8e8e9; }
 
 #mainNav {
   background-color: #f6f4ef; }
@@ -290,7 +290,7 @@ body {
         left: -14px;
         border-right-width: 14px;
         border-left-width: 0; }
-    .project-timeline > li .project-timeline-image {
+    .project-timeline > li .project-timeline-bullet {
       position: absolute;
       z-index: 100;
       left: 0;
@@ -302,7 +302,7 @@ body {
       border: 3px solid #d8d0b9;
       border-radius: 100%;
       background-color: #d8d0b9; }
-      .project-timeline > li .project-timeline-image h4 {
+      .project-timeline > li .project-timeline-bullet h4 {
         font-size: 10px;
         line-height: 14px;
         margin-top: 12px; }
@@ -340,11 +340,11 @@ body {
       float: left;
       padding: 0 50px 0 175px;
       text-align: right; }
-    .project-timeline > li .project-timeline-image {
+    .project-timeline > li .project-timeline-bullet {
       left: 40px;
       width: 100px;
       height: 100px; }
-      .project-timeline > li .project-timeline-image h4 {
+      .project-timeline > li .project-timeline-bullet h4 {
         font-size: 13px;
         line-height: 18px;
         margin-top: 16px; }
@@ -360,10 +360,10 @@ body {
     min-height: 150px; }
       .project-timeline > li .project-timeline-panel {
         padding: 0 75px 0 225px; }
-      .project-timeline > li .project-timeline-image {
+      .project-timeline > li .project-timeline-bullet {
         width: 150px;
         height: 150px; }
-        .project-timeline > li .project-timeline-image h4 {
+        .project-timeline > li .project-timeline-bullet h4 {
           font-size: 18px;
           line-height: 26px;
           margin-top: 30px; }
@@ -373,9 +373,9 @@ body {
 @media (min-width: 1024px) {
   .project-timeline:before {
     left: 175px; }
-    .project-timeline > li .project-timeline-image {
+    .project-timeline > li .project-timeline-bullet {
       left: 100px; }
-      .project-timeline > li .project-timeline-image h4 {
+      .project-timeline > li .project-timeline-bullet h4 {
         margin-top: 40px; }
       .project-timeline > li.project-timeline-inverted > .project-timeline-panel {
         padding: 0 100px 0 300px; }
