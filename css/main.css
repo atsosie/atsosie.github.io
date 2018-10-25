@@ -1,0 +1,49 @@
+body {
+  overflow-x: hidden;
+  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #63636b;
+  background-color: #f6f4ef;
+  font-size: 16px;
+}
+
+h1 {
+  color: #212529;
+  font-size: 1.75rem;
+  font-weight: 800;
+  /* font-family: ; */
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  /* font-family: ; */
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  line-height: 1.75;
+}
+
+a {
+  color: #812530;
+  text-decoration: none;
+}
+a:hover {
+  background-color: #d8d0b9;
+  padding: 0 5px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/*
+use this for navbar:
+
+background-color: rgba(255, 255, 255, 0.5);
+*/
