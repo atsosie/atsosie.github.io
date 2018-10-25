@@ -1,3 +1,8 @@
+/*
+ * Custom stylesheet by Amber Tsosie.
+ * Pure CSS navbar created with help from tutorial by Kevin Powell (https://www.kevinpowell.co/).
+ */
+
 :root {
   --background-faded: rgba(255, 255, 255, 0.5);
   --background-light: #f6f4ef;
@@ -50,8 +55,9 @@ a {
 }
 a:hover {
   color: var(--accent-dark);
-  padding: 0 5px;
 }
+
+/* NAVIGATION */
 
 header {
   position: fixed;
@@ -59,6 +65,12 @@ header {
   width: 100%;
   background: var(--background-faded);
   text-align: center;
+}
+
+.logo {
+  margin: 0;
+  padding: 1em;
+  color: var(--accent-light);
 }
 
 .nav-toggle {
@@ -70,7 +82,6 @@ header {
   top: 0;
   left: 0;
   margin-left: 1em;
-  /* border: 1px solid red; */
   height: 100%;
   display: flex;
   align-items: center;
@@ -127,7 +138,7 @@ nav li {
 nav a {
   color: var(--text-primary);
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   text-transform: uppercase;
   opacity: 0;
   transition: opacity 100ms ease-in-out;
@@ -144,6 +155,63 @@ nav a:hover {
 .nav-toggle:checked ~ nav a {
   opacity: 1;
   transition: opacity 100ms ease-in-out 100ms;
+}
+
+/* large screens */
+@media screen and (min-width: 800px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: auto auto minmax(600px, 1fr) auto;
+  }
+
+  .logo {
+    grid-column: 2 / 3;
+  }
+
+  /* ***'all: unset' property may not be supported */
+  nav {
+    all: unset;
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  nav li {
+    margin: 0 1em;
+  }
+
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+
+  /* highlight line displays over top of links */
+  nav a::before {
+    content: "";
+    display: block;
+    height: 5px;
+    background: var(--background-dark);
+    position: absolute;
+    top: -0.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+  }
+
+  nav a:hover::before {
+    transform: scale(1, 1);
+  }
 }
 
 /* .container-body {
