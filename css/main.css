@@ -2,9 +2,10 @@
  * Pure CSS responsive navbar created with help from tutorial by Kevin Powell (https://www.kevinpowell.co/). */
 
 :root {
-  --background-faded: rgba(255, 255, 255, 0.75);
-  --background-light: #f6f4ef;
-  --background-dark: #d8d0b9;
+  --bg-faded: rgba(255, 255, 255, 0.85);
+  --bg-light: #f6f4ef;
+  --bg-dark: #d8d0b9;
+  --bg-dark-faded: rgba(216, 208, 185, 0.75);
   --text-primary: #908c83;
   --accent-light: #812530;
   --accent-dark: #373741;
@@ -16,14 +17,17 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: var(--text-primary);
-  background-color: var(--background-light);
-  font-size: 16px;
+  background-color: var(--bg-light);
 }
 
 h1 {
@@ -56,6 +60,11 @@ a:hover {
   color: var(--accent-dark);
 }
 
+.subheading {
+  color: var(--accent-light);
+  font-style: italic;
+}
+
 /* ----------
  * NAVIGATION
  * ---------- */
@@ -64,7 +73,7 @@ header {
   position: fixed;
   z-index: 999;
   width: 100%;
-  background: var(--background-faded);
+  background: var(--bg-faded);
   text-align: left;
 }
 
@@ -83,7 +92,7 @@ header {
 }
 
 .nav-toggle:focus ~ .nav-toggle-label {
-  border: 2px solid var(--background-dark);
+  border: 2px solid var(--bg-dark);
 }
 
 .nav-toggle-label {
@@ -125,7 +134,7 @@ nav {
   top: 100%;
   left: 0;
   width: 100%;
-  background: var(--background-faded);
+  background: var(--bg-faded);
   text-align: left;
   transform: scale(1, 0);
   transform-origin: top;
@@ -208,7 +217,7 @@ nav a:hover {
     content: "";
     display: block;
     height: 5px;
-    background: var(--background-dark);
+    background: var(--bg-dark);
     position: absolute;
     top: -0.25em;
     left: 0;
