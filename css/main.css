@@ -1,15 +1,13 @@
-/*
- * Custom stylesheet by Amber Tsosie.
- * Pure CSS navbar created with help from tutorial by Kevin Powell (https://www.kevinpowell.co/).
- */
+/* Custom stylesheet by Amber Tsosie.
+ * Pure CSS responsive navbar created with help from tutorial by Kevin Powell (https://www.kevinpowell.co/). */
 
 :root {
-  --background-faded: rgba(255, 255, 255, 0.5);
+  --background-faded: rgba(255, 255, 255, 0.75);
   --background-light: #f6f4ef;
   --background-dark: #d8d0b9;
-  --text-primary: #63636b;
+  --text-primary: #908c83;
   --accent-light: #812530;
-  --accent-dark: #212529;
+  --accent-dark: #373741;
 }
 
 *,
@@ -53,35 +51,45 @@ a {
   color: var(--accent-light);
   text-decoration: none;
 }
+
 a:hover {
   color: var(--accent-dark);
 }
 
-/* NAVIGATION */
+/* ----------
+ * NAVIGATION
+ * ---------- */
 
 header {
   position: fixed;
   z-index: 999;
   width: 100%;
   background: var(--background-faded);
-  text-align: center;
+  text-align: left;
 }
 
 .logo {
   margin: 0;
-  padding: 1em;
+  padding: 10px 20px;
   color: var(--accent-light);
 }
 
+/* allows menu button (input) to gain focus,
+ * making it tabbable for better accessibility */
 .nav-toggle {
-  display: none;
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+.nav-toggle:focus ~ .nav-toggle-label {
+  border: 2px solid var(--background-dark);
 }
 
 .nav-toggle-label {
   position: absolute;
   top: 0;
-  left: 0;
-  margin-left: 1em;
+  right: 1em;
   height: 100%;
   display: flex;
   align-items: center;
@@ -121,7 +129,7 @@ nav {
   text-align: left;
   transform: scale(1, 0);
   transform-origin: top;
-  transition: transform 100ms ease-in-out;
+  transition: transform 150ms ease-in-out;
 }
 
 nav ul {
@@ -132,7 +140,7 @@ nav ul {
 
 nav li {
   margin-bottom: 1em;
-  margin-left: 1em;
+  margin-left: 20px;
 }
 
 nav a {
@@ -157,7 +165,7 @@ nav a:hover {
   transition: opacity 100ms ease-in-out 100ms;
 }
 
-/* large screens */
+/* for large screens */
 @media screen and (min-width: 800px) {
   .nav-toggle-label {
     display: none;
@@ -165,7 +173,7 @@ nav a:hover {
 
   header {
     display: grid;
-    grid-template-columns: auto auto minmax(600px, 1fr) auto;
+    grid-template-columns: 1fr auto minmax(75%, 1fr) 1fr;
   }
 
   .logo {
@@ -202,7 +210,7 @@ nav a:hover {
     height: 5px;
     background: var(--background-dark);
     position: absolute;
-    top: -0.75em;
+    top: -0.25em;
     left: 0;
     right: 0;
     transform: scale(0, 1);
