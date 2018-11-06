@@ -84,7 +84,7 @@ a:hover {
   padding: 1.5em;
 }
 
-footer {
+.container-main footer {
   grid-area: footer;
   padding: 1.5em;
 }
@@ -333,7 +333,28 @@ nav a:hover {
  * --------------------- */
 
 .container-project {
-  padding: 100px 1.5em 1.5em 1.5em;
+  display: grid;
+  grid-template-columns: 1fr minmax(min-content, 80vw) 1fr;
+  grid-row-gap: 1.5em;
+  padding: 100px 0 0 0;
+}
+
+.container-details {
+  grid-column: 2 / 3;
+}
+
+.container-img {
+  grid-column: 1 / -1;
+  z-index: 100;
+}
+
+.container-img img {
+  width: 100%;
+}
+
+.container-project footer {
+  grid-column: 2 / 3;
+  padding: 1.5em 0;
 }
 
 /* ------------------
@@ -351,6 +372,7 @@ li {
 }
 
 .container-main,
-.container-project {
+.container-project,
+.container-details {
   border: 5px solid cyan;
 }
