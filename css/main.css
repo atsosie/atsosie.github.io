@@ -64,19 +64,15 @@ a:hover {
   font-style: italic;
 }
 
+.list-unstyled {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 /* -----------
  * MAIN LAYOUT
  * ----------- */
-
-/* for mobile view */
-.container {
-  display: grid;
-  grid-template:
-    "portfolio"
-    "about"
-    "footer"
-    / 100vw;
-}
 
 .portfolio {
   grid-area: portfolio;
@@ -93,9 +89,19 @@ footer {
   padding: 1.5em;
 }
 
+/* for mobile view */
+.container-main {
+  display: grid;
+  grid-template:
+    "portfolio"
+    "about"
+    "footer"
+    / 100vw;
+}
+
 /* for larger screens */
 @media screen and (min-width: 400px) {
-  .container {
+  .container-main {
     display: grid;
     grid-template:
       ". portfolio ."
@@ -179,12 +185,6 @@ nav {
   transform: scale(1, 0);
   transform-origin: top;
   transition: transform 150ms ease-in-out;
-}
-
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
 }
 
 nav li {
@@ -275,11 +275,8 @@ nav a:hover {
  * PORTFOLIO SECTION
  * ------------------ */
 
-/* list of projects */
+/* project grid layout */
 .portfolio ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-auto-rows: minmax(250px, 1fr);
@@ -331,12 +328,29 @@ nav a:hover {
     url("../img/portfolio/painted-canvas.jpg");
 }
 
+/* ---------------------
+ * PROJECT DETAILS PAGE
+ * --------------------- */
+
+.container-project {
+  padding: 100px 1.5em 1.5em 1.5em;
+}
+
 /* ------------------
  * *** DELETE LATER
  * ------------------ */
-/* body,
+
 section,
+footer {
+  border: 2px solid red;
+}
+
 ul,
 li {
-  border: 1px solid red;
-} */
+  border: 2px dotted green;
+}
+
+.container-main,
+.container-project {
+  border: 5px solid cyan;
+}
