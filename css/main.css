@@ -331,33 +331,6 @@ nav a:hover {
  * PROJECT DETAILS PAGE
  * --------------------- */
 
-/* .container-project {
-  display: grid;
-  grid-template-columns: 1fr minmax(min-content, 80vw) 1fr;
-  grid-row-gap: 1.5em;
-  padding: 100px 0 0 0;
-}
-
-.container-details {
-  grid-column: 2 / 3;
-}
-
-.container-img {
-  grid-column: 1 / -1;
-  z-index: 100;
-}
-
-.container-img img {
-  width: 100%;
-}
-
-.container-project footer {
-  grid-column: 2 / 3;
-  padding: 1.5em 0;
-} */
-
-/* NEW TIMELINE STYLES */
-
 /* main page layout */
 .container-project {
   padding: 150px 0;
@@ -385,7 +358,7 @@ nav a:hover {
   grid-column: 2 / 3;
   grid-row: 1;
   width: 100%;
-  background-color: #812530;
+  background-color: var(--bg-dark);
   border-radius: 50%;
   z-index: 1;
 }
@@ -401,7 +374,7 @@ nav a:hover {
   grid-row: 1;
   height: 100%;
   width: 2px;
-  background-color: #812530;
+  background-color: var(--bg-dark);
   z-index: -1;
 }
 
