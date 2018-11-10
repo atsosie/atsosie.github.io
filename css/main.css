@@ -1,0 +1,421 @@
+/* Custom stylesheet by Amber Tsosie.
+ * Pure CSS responsive navbar created with help from tutorial by Kevin Powell (https://www.kevinpowell.co/). */
+
+:root {
+  --bg-faded: rgba(255, 255, 255, 0.85);
+  --bg-light: #f6f4ef;
+  --bg-dark: #d8d0b9;
+  --bg-dark-faded: rgba(216, 208, 185, 0.75);
+  --text-primary: #908c83;
+  --accent-light: #812530;
+  --accent-dark: #373741;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: var(--text-primary);
+  background-color: var(--bg-light);
+}
+
+h1 {
+  color: var(--accent-dark);
+  font-size: 1.75rem;
+  font-weight: 800;
+  /* font-family: ***; */
+  margin-bottom: 0.75rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  /* font-family: ***; */
+  margin-bottom: 0.75rem;
+}
+
+p {
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+}
+
+a {
+  color: var(--accent-light);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-dark);
+}
+
+.subheading {
+  color: var(--accent-light);
+  font-style: italic;
+}
+
+.list-unstyled {
+  list-style: none;
+  line-height: 1.5;
+}
+
+/* -----------
+ * MAIN LAYOUT
+ * ----------- */
+
+.portfolio {
+  grid-area: portfolio;
+  padding: 150px 0;
+}
+
+.about {
+  grid-area: about;
+  padding: 1.5em;
+}
+
+.container-main footer {
+  grid-area: footer;
+  padding: 1.5em;
+}
+
+/* for mobile view */
+.container-main {
+  display: grid;
+  grid-template:
+    "portfolio"
+    "about"
+    "footer"
+    / 100vw;
+}
+
+/* for larger screens */
+@media screen and (min-width: 400px) {
+  .container-main {
+    display: grid;
+    grid-template:
+      ". portfolio ."
+      ". about ."
+      ". footer ."
+      / 3fr minmax(min-content, 75vw) 1fr;
+  }
+}
+
+/* -----------
+ * NAVIGATION
+ * ----------- */
+
+header {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  background: var(--bg-faded);
+  text-align: left;
+}
+
+.logo {
+  margin: 0;
+  padding: 10px 20px;
+  color: var(--accent-light);
+}
+
+/* allows menu button (input) to gain focus,
+ * making it tabbable for better accessibility */
+.nav-toggle {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+.nav-toggle:focus ~ .nav-toggle-label {
+  border: 2px solid var(--bg-dark);
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  right: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: var(--accent-light);
+  height: 2px;
+  width: 2em;
+  border-radius: 3px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: "";
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: var(--bg-faded);
+  text-align: left;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 150ms ease-in-out;
+}
+
+nav li {
+  margin-bottom: 1em;
+  margin-left: 20px;
+}
+
+nav a {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 100ms ease-in-out;
+}
+
+nav a:hover {
+  color: var(--accent-light);
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 100ms ease-in-out 100ms;
+}
+
+/* for larger screens */
+@media screen and (min-width: 800px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(75%, 1fr) 1fr;
+  }
+
+  .logo {
+    grid-column: 2 / 3;
+  }
+
+  /* ***'all: unset' property may not be supported */
+  nav {
+    all: unset;
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  nav li {
+    margin: 0 1em;
+  }
+
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+
+  /* highlight line displays over top of links */
+  nav a::before {
+    content: "";
+    display: block;
+    height: 5px;
+    background: var(--bg-dark);
+    position: absolute;
+    top: -0.25em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+  }
+
+  nav a:hover::before {
+    transform: scale(1, 1);
+  }
+}
+
+/* ------------------
+ * PORTFOLIO SECTION
+ * ------------------ */
+
+/* project grid layout */
+.portfolio ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: minmax(250px, 1fr);
+  grid-gap: 1.5em;
+}
+
+/* project preview tiles */
+.portfolio li {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 0 1rem;
+  background-size: cover;
+  color: var(--text-primary);
+  font-family: Avenir, Heveltica, Arial, san-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: right;
+}
+
+/* project preview images */
+.portfolio li:nth-child(1) {
+  background-image: linear-gradient(transparent 25%, #f6f4ef),
+    url("../img/portfolio/painted-canvas.jpg");
+}
+
+.portfolio li:nth-child(2) {
+  background-image: linear-gradient(transparent 25%, #f6f4ef),
+    url("../img/portfolio/painted-canvas.jpg");
+}
+
+.portfolio li:nth-child(3) {
+  background-image: linear-gradient(transparent 25%, #f6f4ef),
+    url("../img/portfolio/painted-canvas.jpg");
+}
+
+.portfolio li:nth-child(4) {
+  background-image: linear-gradient(transparent 25%, #f6f4ef),
+    url("../img/portfolio/painted-canvas.jpg");
+}
+
+.portfolio li:nth-child(5) {
+  background-image: linear-gradient(transparent 25%, #f6f4ef),
+    url("../img/portfolio/painted-canvas.jpg");
+}
+
+.portfolio li:nth-child(6) {
+  background-image: linear-gradient(transparent 25%, #f6f4ef),
+    url("../img/portfolio/painted-canvas.jpg");
+}
+
+/* ---------------------
+ * PROJECT DETAILS PAGE
+ * --------------------- */
+
+/* main page layout */
+.container-project {
+  padding: 150px 0;
+  display: grid;
+  grid-template-columns: minmax(1em, 1fr) 1fr minmax(min-content, 50vw) minmax(
+      1em,
+      1fr
+    );
+  grid-auto-flow: column;
+}
+
+/* timeline decoration (bullet+line) fills 2nd column of main page layout */
+.container-bullet {
+  grid-column: 2 / 3;
+  height: 100%;
+  display: grid;
+  justify-items: center;
+  align-items: start;
+  grid-template-columns: 1fr minmax(50px, 100px) 1fr; /* controls size of bullets */
+}
+
+/* bullets align with top of each element that has class "container-content"
+   (only direct children of "container-project") */
+.bullet {
+  grid-column: 2 / 3;
+  grid-row: 1;
+  width: 100%;
+  background-color: var(--bg-dark);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.bullet:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.vertical-line {
+  grid-column: 2 / 3;
+  grid-row: 1;
+  height: 100%;
+  width: 2px;
+  background-color: var(--bg-dark);
+  z-index: -1;
+}
+
+/* timeline text fills 3rd column of main page layout */
+.container-content {
+  grid-column: 3 / 4;
+  margin: 0 0 5rem 2rem;
+}
+
+.container-img {
+  display: inherit; /* collapses margin below img */
+  grid-column: 1 / -1;
+  z-index: 100;
+  opacity: 0.5; /* ***delete later - shows if vertical-line is behind img */
+}
+
+.container-img img {
+  width: 100%;
+}
+
+footer {
+  grid-column: 3 / 4;
+  padding: 1.5em 20px;
+}
+
+/* ------------------
+ * *** DELETE LATER
+ * ------------------ */
+
+section,
+footer {
+  border: 2px solid red;
+}
+
+/* ul,
+li {
+  border: 2px dotted green;
+} */
+
+.container-main,
+.container-project,
+.container-details {
+  border: 5px solid cyan;
+}
