@@ -34,14 +34,14 @@ h1 {
   color: var(--accent-dark);
   font-size: 1.75rem;
   font-weight: 800;
-  /* font-family: ***; */
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin-bottom: 0.75rem;
 }
 
 h2 {
   font-size: 1.5rem;
   font-weight: 600;
-  /* font-family: ***; */
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin-bottom: 0.75rem;
 }
 
@@ -126,6 +126,8 @@ header {
   margin: 0;
   padding: 10px 20px;
   color: var(--accent-light);
+  font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+  font-weight: 400;
 }
 
 /* allows menu button (input) to gain focus,
@@ -189,6 +191,8 @@ nav {
 nav li {
   margin-bottom: 1em;
   margin-left: 20px;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
 }
 
 nav a {
@@ -404,18 +408,22 @@ footer {
  * *** DELETE LATER
  * ------------------ */
 
-section,
+/* section,
 footer {
   border: 2px solid red;
-}
+} */
 
 /* ul,
 li {
   border: 2px dotted green;
 } */
 
-.container-main,
+/* .container-main,
 .container-project,
 .container-details {
   border: 5px solid cyan;
+} */
+
+.banner {
+  padding: 150px 2em;
 }
