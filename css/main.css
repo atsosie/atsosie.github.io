@@ -70,47 +70,6 @@ a:hover {
 }
 
 /* -----------
- * MAIN LAYOUT
- * ----------- */
-
-.portfolio {
-  grid-area: portfolio;
-  padding: 150px 0;
-}
-
-.about {
-  grid-area: about;
-  padding: 1.5em;
-}
-
-.container-main footer {
-  grid-area: footer;
-  padding: 1.5em;
-}
-
-/* for mobile view */
-.container-main {
-  display: grid;
-  grid-template:
-    "portfolio"
-    "about"
-    "footer"
-    / 100vw;
-}
-
-/* for larger screens */
-@media screen and (min-width: 400px) {
-  .container-main {
-    display: grid;
-    grid-template:
-      ". portfolio ."
-      ". about ."
-      ". footer ."
-      / 3fr minmax(min-content, 75vw) 1fr;
-  }
-}
-
-/* -----------
  * NAVIGATION
  * ----------- */
 
@@ -273,6 +232,82 @@ nav a:hover {
     transform: scale(1, 1);
   }
 }
+
+/* -----------
+ * MAIN LAYOUT
+ * ----------- */
+
+.intro {
+  grid-area: intro;
+  z-index: 1000;
+}
+
+.portfolio {
+  grid-area: portfolio;
+  padding: 150px 0;
+}
+
+.about {
+  grid-area: about;
+  padding: 1.5em;
+}
+
+.container-main footer {
+  grid-area: footer;
+  padding: 1.5em;
+}
+
+/* for mobile view */
+.container-main {
+  display: grid;
+  grid-template:
+    "intro"
+    "portfolio"
+    "about"
+    "footer"
+    / 100vw;
+}
+
+/* for larger screens */
+@media screen and (min-width: 400px) {
+  .container-main {
+    display: grid;
+    grid-template:
+      "intro intro intro"
+      ". portfolio ."
+      ". about ."
+      ". footer ."
+      / 3fr minmax(min-content, 75vw) 1fr;
+  }
+}
+
+/* ------------------
+ * INTRO SECTION
+ * ------------------ */
+
+.intro {
+  height: 100vh;
+  background-color: var(--accent-dark);
+
+  display: grid;
+  grid-template-columns: 3fr minmax(min-content, 75vw) 1fr;
+  grid-template-rows: 1fr min-content min-content 1fr;
+  grid-gap: 1em;
+}
+
+.intro .title {
+  color: var(--accent-light);
+
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.intro .subtitle {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+/* vertical line */
 
 /* ------------------
  * PORTFOLIO SECTION
