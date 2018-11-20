@@ -292,7 +292,7 @@ nav a:hover {
   display: grid;
   grid-template-columns: 3fr minmax(min-content, 75vw) 1fr;
   grid-template-rows: 1fr min-content min-content 1fr;
-  grid-gap: 1em;
+  grid-row-gap: 1em;
 }
 
 .intro .title {
@@ -388,7 +388,7 @@ nav a:hover {
   display: grid;
   justify-items: center;
   align-items: start;
-  grid-template-columns: 1fr minmax(50px, 100px) 1fr; /* controls size of bullets */
+  grid-template-columns: 1fr minmax(4em, 8em) 1fr; /* controls size of bullets */
 }
 
 /* bullets align with top of each element that has class "container-content"
@@ -397,15 +397,10 @@ nav a:hover {
   grid-column: 2 / 3;
   grid-row: 1;
   width: 100%;
+  padding-bottom: 100%;
   background-color: var(--bg-dark);
   border-radius: 50%;
   z-index: 1;
-}
-
-.bullet:after {
-  content: "";
-  display: block;
-  padding-bottom: 100%;
 }
 
 .vertical-line {
