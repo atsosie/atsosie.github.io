@@ -241,11 +241,6 @@ nav a:hover {
  * MAIN LAYOUT
  * ----------- */
 
-.intro {
-  grid-area: intro;
-  z-index: 1000;
-}
-
 .projects {
   grid-area: projects;
   padding: 150px 0;
@@ -265,7 +260,6 @@ nav a:hover {
 .container-main {
   display: grid;
   grid-template:
-    "intro"
     "projects"
     "about"
     "footer"
@@ -277,41 +271,12 @@ nav a:hover {
   .container-main {
     display: grid;
     grid-template:
-      "intro intro intro"
       ". projects ."
       ". about ."
       ". footer ."
       / 3fr minmax(min-content, 75vw) 1fr;
   }
 }
-
-/* ------------------
- * INTRO SECTION
- * ------------------ */
-
-.intro {
-  height: 100vh;
-  background-color: var(--accent-dark);
-
-  display: grid;
-  grid-template-columns: 3fr minmax(min-content, 75vw) 1fr;
-  grid-template-rows: 1fr min-content min-content 1fr;
-  grid-row-gap: 1em;
-}
-
-.intro .title {
-  color: var(--accent-light);
-
-  grid-column: 2;
-  grid-row: 2;
-}
-
-.intro .subtitle {
-  grid-column: 2;
-  grid-row: 3;
-}
-
-/* vertical line */
 
 /* ------------------
  * PROJECTS SECTION
@@ -337,6 +302,8 @@ nav a:hover {
   font-weight: bold;
   font-size: 1.5rem;
   text-align: right;
+
+  border: 1px dotted cyan;
 }
 
 /* project preview images */
