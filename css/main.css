@@ -68,14 +68,7 @@ body {
   overflow-x: hidden;
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: var(--text-primary);
-  background-image: linear-gradient(
-    to right,
-    /* bg-light */ #f6f4ef,
-    /* bg-light */ #f6f4ef 30px,
-    /* bg-dark */ #d8d0b9 30px,
-    /* bg-dark */ #d8d0b9 35px,
-    /* bg-light */ #f6f4ef 35px
-  );
+  background: var(--bg-light);
 }
 
 h1 {
@@ -128,16 +121,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 0 20px 45px;
-  background: linear-gradient(
-      to right,
-      transparent,
-      transparent 30px,
-      #d8d0b9 30px,
-      #d8d0b9 35px,
-      transparent 35px
-    ),
-    linear-gradient(#f6f4ef 50%, transparent);
+  padding: 0 0 20px 10px;
+  background: linear-gradient(#f6f4ef 50%, transparent);
 }
 
 .logo {
@@ -175,7 +160,7 @@ header {
 
 nav {
   position: absolute;
-  top: 100%;
+  top: 0;
   left: 0;
   width: 100%;
   background: var(--bg-faded);
@@ -183,6 +168,8 @@ nav {
   transform: scale(1, 0);
   transform-origin: top;
   transition: transform 150ms ease-in-out;
+  z-index: -1;
+  padding-top: 75px;
 }
 
 nav li {
