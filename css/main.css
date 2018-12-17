@@ -121,7 +121,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 0 20px 10px;
+  padding: 2% 0 5% 5vw;
   background: linear-gradient(#f6f4ef 50%, transparent);
 }
 
@@ -151,7 +151,7 @@ header {
   height: 3px;
   position: relative;
   vertical-align: middle;
-  width: 50px;
+  width: 5vw;
 }
 
 .nav-toggle-label:hover {
@@ -201,9 +201,9 @@ nav a:hover {
   transition: opacity 100ms ease-in-out 100ms;
 }
 
-/* -----------
+/* ------------
  * MAIN LAYOUT
- * ----------- */
+ * ------------ */
 
 .projects {
   grid-area: projects;
@@ -220,31 +220,35 @@ nav a:hover {
   padding: 1.5em;
 }
 
-/* for mobile view */
+/* default (for larger screens) */
 .container-main {
   display: grid;
   grid-template:
-    "projects"
-    "about"
-    "footer"
-    / 100vw;
+    ". projects ."
+    ". about ."
+    ". footer ."
+    / 1fr minmax(min-content, 80vw) 1fr;
 }
 
-/* for larger screens */
-@media screen and (min-width: 400px) {
+/* for mobile view */
+@media screen and (max-width: 400px) {
   .container-main {
     display: grid;
     grid-template:
-      ". projects ."
-      ". about ."
-      ". footer ."
-      / 3fr minmax(min-content, 75vw) 1fr;
+      "projects"
+      "about"
+      "footer"
+      / 100vw;
+  }
+
+  header {
+    padding: 0 0 20px 10px;
   }
 }
 
-/* ------------------
+/* -----------------
  * PROJECTS SECTION
- * ------------------ */
+ * ----------------- */
 
 /* project grid layout */
 .projects ul {
@@ -301,13 +305,21 @@ nav a:hover {
     url("../img/projects/painted-canvas.jpg");
 }
 
+/* --------------
+ * ABOUT SECTION
+ * -------------- */
+
 /* ---------------------
  * PROJECT DETAILS PAGE
  * --------------------- */
 
 /* main page layout */
-.container-project {
+
+.project-details {
   padding: 150px 0;
+}
+
+.container-timeline {
   display: grid;
   grid-template-columns: minmax(1em, 1fr) 1fr minmax(min-content, 50vw) minmax(
       1em,
@@ -327,7 +339,7 @@ nav a:hover {
 }
 
 /* bullets align with top of each element that has class "container-content"
-   (only direct children of "container-project") */
+   (only direct children of "container-timeline") */
 .bullet {
   grid-column: 2 / 3;
   grid-row: 1;
@@ -384,7 +396,7 @@ li {
 } */
 
 /* .container-main,
-.container-project,
+.container-timeline,
 .container-details {
   border: 5px solid cyan;
 } */
