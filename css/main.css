@@ -11,6 +11,47 @@
   --accent-dark: #373741;
 }
 
+/* ***DELETE after testing */
+/* .colors {
+  margin-bottom: 50px;
+}
+.colors div:nth-child(1) {
+  background-color: #e0d3c6;
+  padding: 25px;
+  margin: 5px;
+}
+.colors div:nth-child(2) {
+  background-color: #bda78e;
+  padding: 25px;
+  margin: 5px;
+}
+.colors div:nth-child(3) {
+  background-color: #b46853;
+  padding: 25px;
+  margin: 5px;
+}
+.colors div:nth-child(4) {
+  background-color: #a06656;
+  padding: 25px;
+  margin: 5px;
+}
+.colors div:nth-child(5) {
+  background-color: #812530;
+  padding: 25px;
+  margin: 5px;
+}
+.colors div:nth-child(6) {
+  background-color: #373741;
+  padding: 25px;
+  margin: 5px;
+}
+.colors div:nth-child(7) {
+  background-color: #1d1822;
+  padding: 25px;
+  margin: 5px;
+} */
+/* ----------------------- */
+
 *,
 *::before,
 *::after {
@@ -27,7 +68,14 @@ body {
   overflow-x: hidden;
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: var(--text-primary);
-  background-color: var(--bg-light);
+  background-image: linear-gradient(
+    to right,
+    /* bg-light */ #f6f4ef,
+    /* bg-light */ #f6f4ef 30px,
+    /* bg-dark */ #d8d0b9 30px,
+    /* bg-dark */ #d8d0b9 35px,
+    /* bg-light */ #f6f4ef 35px
+  );
 }
 
 h1 {
@@ -80,8 +128,16 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-image: linear-gradient(#f6f4ef 50%, transparent);
-  padding: 0 0 20px 10px;
+  padding: 0 0 20px 45px;
+  background: linear-gradient(
+      to right,
+      transparent,
+      transparent 30px,
+      #d8d0b9 30px,
+      #d8d0b9 35px,
+      transparent 35px
+    ),
+    linear-gradient(#f6f4ef 50%, transparent);
 }
 
 .logo {
