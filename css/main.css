@@ -12,44 +12,39 @@
 }
 
 /* ***DELETE after testing */
-/* .colors {
+.colors {
   margin-bottom: 50px;
 }
 .colors div:nth-child(1) {
-  background-color: #e0d3c6;
+  background-color: #f6f4ef;
   padding: 25px;
   margin: 5px;
 }
 .colors div:nth-child(2) {
-  background-color: #bda78e;
+  background-color: #d8d0b9;
   padding: 25px;
   margin: 5px;
 }
 .colors div:nth-child(3) {
-  background-color: #b46853;
+  background-color: #908c83;
   padding: 25px;
   margin: 5px;
 }
 .colors div:nth-child(4) {
-  background-color: #a06656;
-  padding: 25px;
-  margin: 5px;
-}
-.colors div:nth-child(5) {
   background-color: #812530;
   padding: 25px;
   margin: 5px;
 }
-.colors div:nth-child(6) {
+.colors div:nth-child(5) {
   background-color: #373741;
   padding: 25px;
   margin: 5px;
 }
-.colors div:nth-child(7) {
+.colors div:nth-child(6) {
   background-color: #1d1822;
   padding: 25px;
   margin: 5px;
-} */
+}
 /* ----------------------- */
 
 *,
@@ -92,12 +87,12 @@ p {
 }
 
 a {
-  color: var(--accent-light);
+  color: var(--accent-dark);
   text-decoration: none;
 }
 
 a:hover {
-  color: var(--accent-dark);
+  color: var(--accent-light);
 }
 
 .subheading {
@@ -122,12 +117,12 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 2% 0 5% 5vw;
-  background: linear-gradient(#f6f4ef 50%, transparent);
+  background: linear-gradient(#ffffff 50%, transparent);
 }
 
 .logo {
   margin: 0;
-  color: var(--accent-light);
+  color: var(--text-primary);
   font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
   font-weight: 400;
 }
@@ -169,12 +164,12 @@ nav {
   transform-origin: top;
   transition: transform 150ms ease-in-out;
   z-index: -1;
-  padding-top: 75px;
+  padding-top: 100px;
+  padding-left: 5vw; /* to match padding-left of header (text lines up under logo) */
 }
 
 nav li {
   margin-bottom: 1em;
-  margin-left: 20px;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
@@ -205,6 +200,10 @@ nav a:hover {
  * MAIN LAYOUT
  * ------------ */
 
+section {
+  padding-top: 150px;
+}
+
 .projects {
   grid-area: projects;
   padding: 150px 0;
@@ -212,12 +211,11 @@ nav a:hover {
 
 .about {
   grid-area: about;
-  padding: 1.5em;
 }
 
-.container-main footer {
+footer {
   grid-area: footer;
-  padding: 1.5em;
+  padding: 1.5em 5vw; /* to match padding-left of header (text lines up under logo) */
 }
 
 /* default (for larger screens) */
@@ -226,7 +224,7 @@ nav a:hover {
   grid-template:
     ". projects ."
     ". about ."
-    ". footer ."
+    "footer footer footer"
     / 1fr minmax(min-content, 80vw) 1fr;
 }
 
@@ -270,8 +268,6 @@ nav a:hover {
   font-weight: bold;
   font-size: 1.5rem;
   text-align: right;
-
-  border: 1px dotted cyan;
 }
 
 /* project preview images */
@@ -366,19 +362,14 @@ nav a:hover {
 }
 
 .container-img {
-  display: inherit; /* collapses margin below img */
   grid-column: 1 / -1;
   z-index: 100;
-  opacity: 0.5; /* ***delete later - shows if vertical-line is behind img */
+  background-color: var(--bg-dark);
+  display: flex;
 }
 
 .container-img img {
   width: 100%;
-}
-
-footer {
-  grid-column: 3 / 4;
-  padding: 1.5em 20px;
 }
 
 /* ------------------
@@ -402,5 +393,5 @@ li {
 } */
 
 .banner {
-  padding: 150px 2em;
+  padding: 150px 5vw;
 }
