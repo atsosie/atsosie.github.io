@@ -4,6 +4,7 @@
 :root {
   --bg-faded: rgba(255, 255, 255, 0.85);
   --bg-light: #f6f4ef;
+  --bg-medium: #e5dfd0;
   --bg-dark: #d8d0b9;
   --bg-dark-faded: rgba(216, 208, 185, 0.75);
   --text-primary: #908c83;
@@ -341,7 +342,7 @@ footer {
   grid-row: 1;
   width: 100%;
   padding-bottom: 100%;
-  background-color: var(--bg-dark);
+  background-color: var(--bg-medium);
   border-radius: 50%;
   z-index: 1;
 }
@@ -351,7 +352,7 @@ footer {
   grid-row: 1;
   height: 100%;
   width: 2px;
-  background-color: var(--bg-dark);
+  background-color: var(--bg-medium);
   z-index: -1;
 }
 
@@ -364,7 +365,7 @@ footer {
 .container-img {
   grid-column: 1 / -1;
   z-index: 100;
-  background-color: var(--bg-dark);
+  background-color: var(--bg-medium);
   display: flex;
 }
 
