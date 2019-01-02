@@ -204,40 +204,15 @@ section {
 }
 
 .projects {
-  grid-area: projects;
   padding: 150px 0;
 }
 
-.about {
-  grid-area: about;
-}
-
 footer {
-  grid-area: footer;
   padding: 1.5em 5vw; /* to match padding-left of header (text lines up under logo) */
-}
-
-/* default (for larger screens) */
-.container-main {
-  display: grid;
-  grid-template:
-    "projects projects projects"
-    ". about ."
-    "footer footer footer"
-    / 1fr minmax(min-content, 80vw) 1fr;
 }
 
 /* for mobile view */
 @media screen and (max-width: 400px) {
-  .container-main {
-    display: grid;
-    grid-template:
-      "projects"
-      "about"
-      "footer"
-      / 100vw;
-  }
-
   header {
     padding: 0 0 20px 10px;
   }
