@@ -12,42 +12,6 @@
   --accent-dark: #373741;
 }
 
-/* ***DELETE after testing */
-.colors {
-  margin-bottom: 50px;
-}
-.colors div:nth-child(1) {
-  background-color: #f6f4ef;
-  padding: 25px;
-  margin: 5px;
-}
-.colors div:nth-child(2) {
-  background-color: #d8d0b9;
-  padding: 25px;
-  margin: 5px;
-}
-.colors div:nth-child(3) {
-  background-color: #908c83;
-  padding: 25px;
-  margin: 5px;
-}
-.colors div:nth-child(4) {
-  background-color: #812530;
-  padding: 25px;
-  margin: 5px;
-}
-.colors div:nth-child(5) {
-  background-color: #373741;
-  padding: 25px;
-  margin: 5px;
-}
-.colors div:nth-child(6) {
-  background-color: #1d1822;
-  padding: 25px;
-  margin: 5px;
-}
-/* ----------------------- */
-
 *,
 *::before,
 *::after {
@@ -286,11 +250,6 @@ nav a:hover {
   padding-top: 100px;
   display: flex;
   justify-content: space-between;
-}
-
-.about-img {
-  background-image: url("../img/about/about-1.JPG");
-  width: 25%;
 }
 
 .about-container {
