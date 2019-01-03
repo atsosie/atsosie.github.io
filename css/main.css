@@ -88,7 +88,7 @@ p {
 }
 
 a {
-  color: var(--accent-dark);
+  color: var(--text-primary);
   text-decoration: none;
 }
 
@@ -96,7 +96,13 @@ a:hover {
   color: var(--accent-light);
 }
 
-.subheading {
+.heading-bold {
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+}
+
+.heading-italic {
   color: var(--accent-light);
   font-style: italic;
   font-family: "Lora", Times, sans-serif;
@@ -105,6 +111,10 @@ a:hover {
 .list-unstyled {
   list-style: none;
   line-height: 1.5;
+}
+
+.social-icon {
+  fill: var(--text-primary);
 }
 
 /* -----------
@@ -118,15 +128,14 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  text-transform: uppercase;
   padding: 2% 0 5% 5vw;
   background: linear-gradient(#ffffff 50%, transparent);
 }
 
 .logo {
   margin: 0;
-  color: var(--text-primary);
   font-weight: 900;
+  font-size: 1rem;
 }
 
 /* allows menu button (input) to gain focus,
@@ -175,8 +184,6 @@ nav li {
 }
 
 nav a {
-  color: var(--text-primary);
-  text-decoration: none;
   font-size: 1.25rem;
   opacity: 0;
   transition: opacity 100ms ease-in-out;
@@ -199,11 +206,8 @@ nav a:hover {
  * SMALLER VIEWPORTS
  * ----------------- */
 
-@media screen and (max-width: 400px) {
-  header {
-    padding: 0 0 20px 10px;
-  }
-}
+/* @media screen and (max-width: 400px) {
+} */
 
 /* ------------------
  * INTRO SECTION
@@ -221,14 +225,19 @@ nav a:hover {
 }
 
 .intro .title {
-  color: var(--accent-light);
   grid-column: 2;
   grid-row: 2;
+  font-size: 6vw;
+  font-weight: 900;
+  letter-spacing: 0.25rem;
+  color: var(--bg-dark-faded);
+  text-shadow: -3px 3px 1px #812530;
 }
 
 .intro .subtitle {
   grid-column: 2;
   grid-row: 3;
+  font-size: 4vw;
 }
 
 /* -----------------
@@ -261,7 +270,10 @@ nav a:hover {
   grid-row: 2;
   grid-column: 2 / 3;
   padding-left: 0.5rem;
-  text-transform: uppercase;
+}
+
+.proj-preview-label a {
+  text-decoration: none;
 }
 
 .proj-preview-hr {
@@ -318,7 +330,6 @@ nav a:hover {
   padding-bottom: 100%;
   background-color: var(--bg-medium);
   border-radius: 50%;
-  z-index: 1;
 }
 
 .vertical-line {
@@ -327,7 +338,6 @@ nav a:hover {
   height: 100%;
   width: 2px;
   background-color: var(--bg-medium);
-  z-index: -1;
 }
 
 /* timeline text fills 3rd column of main page layout */
@@ -338,7 +348,6 @@ nav a:hover {
 
 .container-img {
   grid-column: 1 / -1;
-  z-index: 100;
   background-color: var(--bg-medium);
   display: flex;
 }
@@ -358,22 +367,6 @@ footer {
 /* ------------------
  * *** DELETE LATER
  * ------------------ */
-
-/* section,
-footer {
-  border: 2px solid red;
-} */
-
-/* ul,
-li {
-  border: 2px dotted green;
-} */
-
-/* .container-main,
-.container-timeline,
-.container-details {
-  border: 5px solid cyan;
-} */
 
 .banner {
   padding: 150px 5vw;
