@@ -54,6 +54,7 @@ p {
 a {
   color: var(--text-primary);
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 a:hover {
@@ -79,6 +80,12 @@ a:hover {
 
 .social-icon {
   fill: var(--text-primary);
+}
+
+*:focus {
+  background-color: var(--bg-dark);
+  padding: 10px;
+  outline: none;
 }
 
 /* -----------
@@ -110,11 +117,19 @@ header {
   left: -9999px !important;
 }
 
-.nav-toggle:focus ~ .nav-toggle-label {
+/* fix this *** */
+/* .nav-toggle:focus ~ .nav-toggle-label {
   border: 2px solid var(--bg-dark);
-}
+} */
 
-.nav-toggle-label:after {
+.nav-hr {
+  display: inline-block;
+  height: 0.25rem;
+  width: 5vw;
+  vertical-align: middle;
+  background-color: var(--bg-dark);
+}
+/* .nav-toggle-label:after {
   background-color: var(--bg-dark);
   content: "";
   display: inline-block;
@@ -122,7 +137,7 @@ header {
   position: relative;
   vertical-align: middle;
   width: 5vw;
-}
+} */
 
 .nav-toggle-label:hover {
   color: var(--accent-light);
@@ -131,16 +146,17 @@ header {
 nav {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  background: var(--bg-faded);
-  text-align: left;
-  transform: scale(1, 0);
-  transform-origin: top;
+  right: 0;
+  width: 50vw;
+  height: 100vh;
+  background: var(--accent-dark);
+  text-align: right;
+  transform: scale(0, 1);
+  transform-origin: right;
   transition: transform 150ms ease-in-out;
   z-index: -1;
   padding-top: 100px;
-  padding-left: 5vw; /* to match padding-left of header (text lines up under logo) */
+  padding-right: 5vw; /* to match padding-right of header (text lines up under INFO) */
 }
 
 nav li {
@@ -217,6 +233,7 @@ nav a:hover {
 .proj-preview-img {
   grid-row: 1;
   grid-column: 2 / 3;
+  padding-bottom: 1em;
 }
 
 .proj-preview-img > img {
