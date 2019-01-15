@@ -10,43 +10,9 @@
   --text-primary: #908c83;
   --accent-light: #812530;
   --accent-dark: #373741;
+  --accent-dark-faded: rgba(55, 55, 65, 0.5);
+  --accent-light-faded: rgba(129, 37, 48, 0.5);
 }
-
-/* ***DELETE after testing */
-.colors {
-  margin-bottom: 50px;
-}
-.colors div:nth-child(1) {
-  background-color: #f6f4ef;
-  padding: 25px;
-  margin: 5px;
-}
-.colors div:nth-child(2) {
-  background-color: #d8d0b9;
-  padding: 25px;
-  margin: 5px;
-}
-.colors div:nth-child(3) {
-  background-color: #908c83;
-  padding: 25px;
-  margin: 5px;
-}
-.colors div:nth-child(4) {
-  background-color: #812530;
-  padding: 25px;
-  margin: 5px;
-}
-.colors div:nth-child(5) {
-  background-color: #373741;
-  padding: 25px;
-  margin: 5px;
-}
-.colors div:nth-child(6) {
-  background-color: #1d1822;
-  padding: 25px;
-  margin: 5px;
-}
-/* ----------------------- */
 
 *,
 *::before,
@@ -62,7 +28,7 @@ html {
 
 body {
   overflow-x: hidden;
-  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lato", Helvetica, sans-serif;
   color: var(--text-primary);
   background: var(--bg-light);
 }
@@ -71,14 +37,14 @@ h1 {
   color: var(--accent-dark);
   font-size: 1.75rem;
   font-weight: 800;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lato", Helvetica, sans-serif;
   margin-bottom: 0.75rem;
 }
 
 h2 {
   font-size: 1.5rem;
   font-weight: 600;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lato", Helvetica, sans-serif;
   margin-bottom: 0.75rem;
 }
 
@@ -88,22 +54,40 @@ p {
 }
 
 a {
-  color: var(--accent-dark);
+  color: var(--text-primary);
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 a:hover {
   color: var(--accent-light);
 }
 
-.subheading {
+.heading-bold {
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+}
+
+.heading-italic {
   color: var(--accent-light);
   font-style: italic;
+  font-family: "Lora", Times, sans-serif;
 }
 
 .list-unstyled {
   list-style: none;
   line-height: 1.5;
+}
+
+.social-icon {
+  fill: var(--text-primary);
+}
+
+*:focus {
+  background-color: var(--bg-dark);
+  padding: 10px;
+  outline: none;
 }
 
 /* -----------
@@ -117,15 +101,14 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2% 0 5% 5vw;
-  background: linear-gradient(#ffffff 50%, transparent);
+  padding: 2vmin 0 2% 5vw;
+  background: linear-gradient(#ffffff 40%, transparent);
 }
 
 .logo {
   margin: 0;
-  color: var(--text-primary);
-  font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
-  font-weight: 400;
+  font-weight: 900;
+  font-size: 1rem;
 }
 
 /* allows menu button (input) to gain focus,
@@ -136,19 +119,27 @@ header {
   left: -9999px !important;
 }
 
-.nav-toggle:focus ~ .nav-toggle-label {
+/* fix this *** */
+/* .nav-toggle:focus ~ .nav-toggle-label {
   border: 2px solid var(--bg-dark);
-}
+} */
 
-.nav-toggle-label:after {
+.nav-hr {
+  display: inline-block;
+  height: 0.25rem;
+  width: 5vw;
+  vertical-align: middle;
+  background-color: var(--bg-dark);
+}
+/* .nav-toggle-label:after {
   background-color: var(--bg-dark);
   content: "";
   display: inline-block;
-  height: 3px;
+  height: 0.25rem;
   position: relative;
   vertical-align: middle;
   width: 5vw;
-}
+} */
 
 .nav-toggle-label:hover {
   color: var(--accent-light);
@@ -157,29 +148,25 @@ header {
 nav {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  background: var(--bg-faded);
-  text-align: left;
-  transform: scale(1, 0);
-  transform-origin: top;
+  right: 0;
+  width: 30vw;
+  height: 100vh;
+  background: var(--accent-dark);
+  text-align: right;
+  transform: scale(0, 1);
+  transform-origin: right;
   transition: transform 150ms ease-in-out;
   z-index: -1;
   padding-top: 100px;
-  padding-left: 5vw; /* to match padding-left of header (text lines up under logo) */
+  padding-right: 5vw; /* to match padding-right of header (text lines up under INFO) */
 }
 
 nav li {
   margin-bottom: 1em;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
 }
 
 nav a {
-  color: var(--text-primary);
-  text-decoration: none;
   font-size: 1.25rem;
-  text-transform: uppercase;
   opacity: 0;
   transition: opacity 100ms ease-in-out;
 }
@@ -197,125 +184,135 @@ nav a:hover {
   transition: opacity 100ms ease-in-out 100ms;
 }
 
-/* ------------
- * MAIN LAYOUT
- * ------------ */
+/* ------------------
+ * INTRO SECTION
+ * ------------------ */
 
-section {
-  padding-top: 150px;
-}
-
-.projects {
-  grid-area: projects;
-  padding: 150px 0;
-}
-
-.about {
-  grid-area: about;
-}
-
-footer {
-  grid-area: footer;
-  padding: 1.5em 5vw; /* to match padding-left of header (text lines up under logo) */
-}
-
-/* default (for larger screens) */
-.container-main {
+.intro {
+  position: relative;
+  z-index: 1000;
+  height: 100vh;
+  background-color: var(--accent-dark);
   display: grid;
-  grid-template:
-    ". projects ."
-    ". about ."
-    "footer footer footer"
-    / 1fr minmax(min-content, 80vw) 1fr;
+  grid-template-columns: 3fr minmax(min-content, 75vw) 1fr;
+  grid-template-rows: 1fr min-content min-content 1fr;
+  grid-row-gap: 1em;
 }
 
-/* for mobile view */
-@media screen and (max-width: 400px) {
-  .container-main {
-    display: grid;
-    grid-template:
-      "projects"
-      "about"
-      "footer"
-      / 100vw;
-  }
+.intro .title {
+  grid-column: 2;
+  grid-row: 2;
+  font-size: 6vw;
+  font-weight: 900;
+  letter-spacing: 0.25rem;
+  color: var(--bg-dark-faded);
+  text-shadow: -3px 3px 1px #812530;
+}
 
-  header {
-    padding: 0 0 20px 10px;
-  }
+.intro .subtitle {
+  grid-column: 2;
+  grid-row: 3;
+  font-size: 4vw;
 }
 
 /* -----------------
  * PROJECTS SECTION
  * ----------------- */
 
-/* project grid layout */
-.projects ul {
+.projects {
+  padding-top: 150px;
+}
+
+.proj-preview-tile {
+  background-image: linear-gradient(transparent, #e5dfd0);
+  background-size: contain;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-auto-rows: minmax(250px, 1fr);
-  grid-gap: 1.5em;
+  grid-template-columns: minmax(1em, 2fr) 75vw minmax(1em, 1fr);
+  padding: 2em 0;
+  margin-bottom: 5em;
 }
 
-/* project preview tiles */
-.projects li {
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  padding: 0 1rem;
-  background-size: cover;
-  color: var(--text-primary);
-  font-family: Avenir, Heveltica, Arial, san-serif;
-  font-weight: bold;
-  font-size: 1.5rem;
-  text-align: right;
+.proj-preview-img {
+  grid-row: 1;
+  grid-column: 2 / 3;
+  padding-bottom: 1em;
 }
 
-/* project preview images */
-.projects li:nth-child(1) {
-  background-image: linear-gradient(transparent 25%, #f6f4ef),
-    url("../img/projects/painted-canvas.jpg");
+.proj-preview-img > img {
+  width: 100%;
 }
 
-.projects li:nth-child(2) {
-  background-image: linear-gradient(transparent 25%, #f6f4ef),
-    url("../img/projects/painted-canvas.jpg");
+.proj-preview-label {
+  grid-row: 2;
+  grid-column: 2 / 3;
+  padding-left: 0.5rem;
 }
 
-.projects li:nth-child(3) {
-  background-image: linear-gradient(transparent 25%, #f6f4ef),
-    url("../img/projects/painted-canvas.jpg");
+.proj-preview-label a {
+  text-decoration: none;
 }
 
-.projects li:nth-child(4) {
-  background-image: linear-gradient(transparent 25%, #f6f4ef),
-    url("../img/projects/painted-canvas.jpg");
-}
-
-.projects li:nth-child(5) {
-  background-image: linear-gradient(transparent 25%, #f6f4ef),
-    url("../img/projects/painted-canvas.jpg");
-}
-
-.projects li:nth-child(6) {
-  background-image: linear-gradient(transparent 25%, #f6f4ef),
-    url("../img/projects/painted-canvas.jpg");
+.proj-preview-hr {
+  grid-row: 2;
+  grid-column: 1;
+  align-self: center;
+  background-color: var(--bg-dark);
+  height: 0.25rem;
+  width: 100%;
 }
 
 /* --------------
  * ABOUT SECTION
  * -------------- */
 
+.about-container {
+  display: grid;
+  grid-template-columns: minmax(1em, 5vw) 1fr 1fr 1fr minmax(1em, 5vw);
+  grid-row-gap: 2em;
+  padding-top: 75px;
+}
+
+.about-hr {
+  grid-row: 1;
+  grid-column: 1 / 3;
+  align-self: center;
+  background-color: var(--bg-dark);
+  height: 0.25rem;
+  width: 100%;
+}
+
+.about-heading {
+  grid-row: 1;
+  grid-column: 3 / 5;
+  padding-left: 0.5rem;
+}
+
+.about-content {
+  grid-row: 2;
+  grid-column: 2 / 4;
+  max-width: 60ch;
+  z-index: 10;
+}
+
+.signature {
+  grid-row: 1 / 4;
+  grid-column: 1 / -1;
+  fill: var(--bg-faded);
+  padding: 2em;
+  align-self: end;
+  justify-self: end;
+  width: 80vw;
+}
+
 /* ---------------------
  * PROJECT DETAILS PAGE
  * --------------------- */
-
-/* main page layout */
 
 .project-details {
   padding: 150px 0;
 }
 
+/* main page layout */
 .container-timeline {
   display: grid;
   grid-template-columns: minmax(1em, 1fr) 1fr minmax(min-content, 50vw) minmax(
@@ -344,7 +341,6 @@ footer {
   padding-bottom: 100%;
   background-color: var(--bg-medium);
   border-radius: 50%;
-  z-index: 1;
 }
 
 .vertical-line {
@@ -353,7 +349,6 @@ footer {
   height: 100%;
   width: 2px;
   background-color: var(--bg-medium);
-  z-index: -1;
 }
 
 /* timeline text fills 3rd column of main page layout */
@@ -364,34 +359,46 @@ footer {
 
 .container-img {
   grid-column: 1 / -1;
-  z-index: 100;
+  display: flex; /* this removes margin around element */
   background-color: var(--bg-medium);
-  display: flex;
+  background-image: linear-gradient(
+      30deg,
+      rgba(144, 140, 131, 0.25),
+      transparent
+    ),
+    url("../img/projects/painted-canvas.jpg");
+  background-size: contain;
 }
 
 .container-img img {
   width: 100%;
 }
 
+/* ------
+ * FOOTER
+ * ------ */
+
+footer {
+  padding: 1.5em 5vw; /* to match padding-left of header (text lines up under logo) */
+}
+
+/* -----------------
+ * SMALLER VIEWPORTS
+ * ----------------- */
+
+@media screen and (max-width: 600px) {
+  nav {
+    width: 50vw;
+  }
+
+  .about-content {
+    grid-column: 2 / 5;
+  }
+}
+
 /* ------------------
  * *** DELETE LATER
  * ------------------ */
-
-/* section,
-footer {
-  border: 2px solid red;
-} */
-
-/* ul,
-li {
-  border: 2px dotted green;
-} */
-
-/* .container-main,
-.container-timeline,
-.container-details {
-  border: 5px solid cyan;
-} */
 
 .banner {
   padding: 150px 5vw;
