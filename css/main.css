@@ -10,6 +10,8 @@
   --text-primary: #908c83;
   --accent-light: #812530;
   --accent-dark: #373741;
+  --accent-dark-faded: rgba(55, 55, 65, 0.5);
+  --accent-light-faded: rgba(129, 37, 48, 0.5);
 }
 
 *,
@@ -147,7 +149,7 @@ nav {
   position: absolute;
   top: 0;
   right: 0;
-  width: 50vw;
+  width: 30vw;
   height: 100vh;
   background: var(--accent-dark);
   text-align: right;
@@ -392,8 +394,11 @@ footer {
  * SMALLER VIEWPORTS
  * ----------------- */
 
-/* @media screen and (max-width: 400px) {
-} */
+@media screen and (max-width: 600px) {
+  nav {
+    width: 50vw;
+  }
+}
 
 /* ------------------
  * *** DELETE LATER
