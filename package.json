@@ -1,0 +1,25 @@
+{
+  "name": "atsosie.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint js/scripts.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atsosie/atsosie.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/atsosie/atsosie.github.io/issues"
+  },
+  "homepage": "https://github.com/atsosie/atsosie.github.io#readme",
+  "devDependencies": {
+    "eslint": "^5.12.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.15.0"
+  }
+}
