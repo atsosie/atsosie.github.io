@@ -54,7 +54,7 @@ p {
 }
 
 a {
-  color: var(--text-primary);
+  color: var(--accent-dark);
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -85,7 +85,7 @@ a:hover {
 }
 
 *:focus {
-  background-color: var(--bg-dark);
+  border: dotted 1px var(--accent-light);
   padding: 10px;
   outline: none;
 }
@@ -93,6 +93,11 @@ a:hover {
 /* -----------
  * NAVIGATION
  * ----------- */
+
+#test {
+  color: #ffffff;
+  cursor: pointer;
+}
 
 header {
   position: fixed;
@@ -111,38 +116,50 @@ header {
   font-size: 1rem;
 }
 
-/* allows menu button (input) to gain focus,
- * making it tabbable for better accessibility */
+/* DELETE later *** showing checkbox to test jquery */
 .nav-toggle {
+  position: absolute !important;
+  top: 0 !important;
+  right: 25vw !important;
+}
+/* .nav-toggle {
   position: absolute !important;
   top: -9999px !important;
   left: -9999px !important;
-}
-
-/* fix this *** */
-/* .nav-toggle:focus ~ .nav-toggle-label {
-  border: 2px solid var(--bg-dark);
 } */
 
-.nav-hr {
-  display: inline-block;
-  height: 0.25rem;
-  width: 5vw;
-  vertical-align: middle;
-  background-color: var(--bg-dark);
+/* allows menu button (input) to gain focus,
+ * making it tabbable for better accessibility */
+.nav-toggle:focus ~ .nav-toggle-label {
+  border: dotted 1px var(--accent-dark);
+  outline: none;
 }
-/* .nav-toggle-label:after {
-  background-color: var(--bg-dark);
-  content: "";
-  display: inline-block;
-  height: 0.25rem;
-  position: relative;
-  vertical-align: middle;
-  width: 5vw;
-} */
+
+.nav-toggle-label {
+  display: grid;
+  grid-template-columns: 1fr 5vw;
+  grid-gap: 0.5rem;
+  cursor: pointer;
+}
 
 .nav-toggle-label:hover {
   color: var(--accent-light);
+}
+
+.nav-hr-1 {
+  grid-column: 2;
+  grid-row: 1;
+  height: 0.25rem;
+  align-self: center;
+  background-color: var(--bg-dark);
+}
+
+.nav-hr-2 {
+  grid-column: 2;
+  grid-row: 1;
+  height: 0.25rem;
+  align-self: center;
+  background-color: var(--bg-dark);
 }
 
 nav {
@@ -172,7 +189,7 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--accent-light);
+  color: var(--bg-light);
 }
 
 .nav-toggle:checked ~ nav {
@@ -182,6 +199,21 @@ nav a:hover {
 .nav-toggle:checked ~ nav a {
   opacity: 1;
   transition: opacity 100ms ease-in-out 100ms;
+}
+
+.nav-toggle:checked ~ .nav-toggle-label {
+  font-size: 3vw;
+}
+
+/* when nav is toggled open, hr next to 'INFO' button turns into an 'X' close button */
+.nav-toggle:checked ~ .nav-toggle-label > .nav-hr-1 {
+  transform: rotate(0.125turn);
+  transition: 200ms;
+}
+
+.nav-toggle:checked ~ .nav-toggle-label > .nav-hr-2 {
+  transform: rotate(-0.125turn);
+  transition: 200ms;
 }
 
 /* ------------------

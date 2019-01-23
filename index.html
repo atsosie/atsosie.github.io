@@ -18,28 +18,33 @@
 
   <body id="homepage-top">
     <header>
-      <h1 class="logo heading-bold"><a href="index.html">Amber Tsosie</a></h1>
+      <h1 class="logo">
+        <a class="heading-bold" href="index.html">Amber Tsosie</a>
+      </h1>
       <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-      <nav>
+      <label
+        for="nav-toggle"
+        id="nav-toggle-label"
+        class="nav-toggle-label heading-bold"
+      >
+        <span>Info</span> <span class="nav-hr-1"></span>
+        <span class="nav-hr-2"></span>
+      </label>
+      <nav id="nav-expanded">
         <ul class="list-unstyled">
-          <li><a class="heading-bold" href="#projects">Projects</a></li>
-          <li><a class="heading-bold" href="#about">About</a></li>
-          <li><a class="heading-bold" href="#">Resume</a></li>
           <li>
-            <a class="heading-bold" href="https://github.com/atsosie">Github</a>
+            <a class="nav-link heading-bold" href="#projects">Projects</a>
           </li>
+          <li><a class="nav-link heading-bold" href="#about">About</a></li>
+          <li><a class="nav-link heading-bold" href="#">Resume</a></li>
           <li>
-            <a
-              class="heading-bold"
-              href="https://www.linkedin.com/in/amber-tsosie/"
-              >LinkedIn</a
+            <a class="nav-link heading-bold" href="https://github.com/atsosie"
+              >Github</a
             >
           </li>
+          <li><a class="nav-link heading-bold" href="#">LinkedIn</a></li>
         </ul>
       </nav>
-      <label for="nav-toggle" class="nav-toggle-label heading-bold">
-        <span>Info</span> <span class="nav-hr"></span>
-      </label>
     </header>
 
     <!-- Intro -->
@@ -230,5 +235,7 @@
       </a> -->
       <span>Copyright &copy; Amber Tsosie 2018</span>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
   </body>
 </html>
