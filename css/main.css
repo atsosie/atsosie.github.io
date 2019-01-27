@@ -117,16 +117,16 @@ header {
 }
 
 /* DELETE later *** showing checkbox to test jquery */
-.nav-toggle {
+/* .nav-toggle {
   position: absolute !important;
   top: 0 !important;
   right: 25vw !important;
-}
-/* .nav-toggle {
+} */
+.nav-toggle {
   position: absolute !important;
   top: -9999px !important;
   left: -9999px !important;
-} */
+}
 
 /* allows menu button (input) to gain focus,
  * making it tabbable for better accessibility */
