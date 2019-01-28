@@ -34,16 +34,15 @@ body {
 }
 
 h1 {
-  color: var(--accent-dark);
   font-size: 1.75rem;
-  font-weight: 800;
+  /* font-weight: 800; */
   font-family: 'Lato', Helvetica, sans-serif;
   margin-bottom: 0.75rem;
 }
 
 h2 {
   font-size: 1.5rem;
-  font-weight: 600;
+  /* font-weight: 600; */
   font-family: 'Lato', Helvetica, sans-serif;
   margin-bottom: 0.75rem;
 }
@@ -64,16 +63,21 @@ a:hover {
 }
 
 .heading-bold {
+  font-weight: normal;
   color: var(--text-primary);
   text-transform: uppercase;
   letter-spacing: 0.125rem;
 }
 
 .heading-italic {
-  color: var(--accent-light);
+  color: var(--text-primary);
   font-style: italic;
   font-family: 'Lora', Times, sans-serif;
 }
+
+/* .subheading {
+
+} */
 
 .list-unstyled {
   list-style: none;
@@ -110,23 +114,23 @@ header {
   background: linear-gradient(#ffffff 40%, transparent);
 }
 
-.logo {
+.logo a {
   margin: 0;
   font-weight: 900;
   font-size: 1rem;
 }
 
 /* DELETE later *** showing checkbox to test jquery */
-.nav-toggle {
+/* .nav-toggle {
   position: absolute !important;
   top: 0 !important;
   right: 25vw !important;
-}
-/* .nav-toggle {
+} */
+.nav-toggle {
   position: absolute !important;
   top: -9999px !important;
   left: -9999px !important;
-} */
+}
 
 /* allows menu button (input) to gain focus,
  * making it tabbable for better accessibility */
@@ -305,7 +309,7 @@ nav a:hover {
 }
 
 .about-hr {
-  grid-row: 1;
+  grid-row: 2;
   grid-column: 1 / 3;
   align-self: center;
   background-color: var(--bg-dark);
@@ -314,26 +318,26 @@ nav a:hover {
 }
 
 .about-heading {
-  grid-row: 1;
+  grid-row: 2;
   grid-column: 3 / 5;
   padding-left: 0.5rem;
 }
 
 .about-content {
-  grid-row: 2;
+  grid-row: 3;
   grid-column: 2 / 4;
   max-width: 60ch;
-  z-index: 10;
 }
 
 .signature {
-  grid-row: 1 / 4;
+  grid-row: 2 / 5;
   grid-column: 1 / -1;
   fill: var(--bg-faded);
   padding: 2em;
   align-self: end;
   justify-self: end;
   width: 80vw;
+  z-index: -1;
 }
 
 /* ---------------------
@@ -342,6 +346,20 @@ nav a:hover {
 
 .project-details {
   padding: 150px 0;
+}
+
+.project-link {
+  display: inline-block;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  background-color: var(--text-primary);
+  color: var(--bg-light);
+  box-shadow: -4px 4px 1px #e5dfd0;
+}
+
+.project-link:hover {
+  background-color: var(--accent-light);
+  color: #ffffff;
 }
 
 /* main page layout */
@@ -419,13 +437,19 @@ footer {
  * SMALLER VIEWPORTS
  * ----------------- */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 675px) {
   nav {
     width: 50vw;
   }
 
   .about-content {
     grid-column: 2 / 5;
+  }
+
+  .signature {
+    grid-row: 1;
+    padding: 0;
+    width: 90vw;
   }
 
   .container-timeline {
